@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    text-align: center;
+    min-width: 300px;
+    width: 80%; /* Set a percentage width for responsiveness */
+    max-width: 600px; /* Limit the maximum width to 600px for larger screens */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allow the calculator to grow and fill available space */
+    display: flex;
+    flex-direction: column;
+}
+
+.output-screen {
+    font-size: 24px;
+    margin-bottom: 10px;
+    flex: 0 0 auto; /* Don't allow the output screen to grow or shrink */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    flex: 1; /* Allow the buttons grid to fill available space */
+    min-height: 0; /* Ensure the calculator can shrink if necessary */
+}
+
+.btn {
+    font-size: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Set the background color for operational buttons to blue */
+.operation {
+    background-color: #66b3ff;
+    color: white;
+}
+
+/* Set the color for numbers and comma to a darker shade */
+.btn.number, .btn.comma {
+    color: #333;
+}
+
+/* Define a class for specific buttons to adjust their size */
+.btn-small {
+    padding: 15px 20px;
+    font-size: 20px;
+}
+
+/* Set the color for numbers and comma to a darker shade on hover */
+.btn.number:hover, .btn.comma:hover {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.equal-btn {
+    grid-column: span 4;
+    background-color: #66b3ff;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 10px;
+    }
+
+    .output-screen {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
