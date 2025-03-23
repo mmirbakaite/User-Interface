@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  font-size: 24px;
+}
+.header #timer {
+  padding: 5px 10px;
+  text-align: center;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+}
+.header #player-name {
+  background-color: transparent;
+  color: #fff;
+}
+.header #player-name span {
+  font-weight: bold;
+}
+.header p {
+  padding: 0;
+  margin: 0;
+}
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player-name-container {
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+  /* Change the color as needed */
+  margin-bottom: 10px;
+}
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-gap: 15px;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card {
+  width: 90px;
+  height: 120px;
+  perspective: 1000px;
+  margin: 5px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.card.flip {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+}
+.front {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+.back {
+  background-color: #ddd;
+  transform: rotateY(180deg);
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.input-container {
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+input[type="submit"] {
+  padding: 8px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+}
+#bestResult {
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 18px;
+  color: #333;
+}
+@media (min-width: 300px) and (max-width: 1072px) {
+  .game-container {
+    grid-template-columns: repeat(4, 80px);
+    /* Adjusting the grid for screens within the specified range */
+    /* Additional adjustments for game container */
+  }
+  /* Add more specific styles for other elements if required */
+}
+@media (max-height: 890px) {
+  .game-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}

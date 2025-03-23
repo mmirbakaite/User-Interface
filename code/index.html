@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Atminties žaidimas</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="header">
+      <div id="timer">Trukmė: 0 s.</div>
+      <div id="player-name">Žaidėjo vardas: <span>-</span></div>
+      <p> Atminties Žaidimas </p>
+    </div>
+
+    <div class="form-container">
+      <form id="nameForm" class="input-container">
+        <label for="username">Įveskite savo vardą:</label>
+        <input type="text" id="username" name="username" required>
+        <input type="submit" value="Pradėti">
+      </form>
+    </div>
+
+    <div class="game-container" id="game-container">
+    </div>
+
+    <div id="bestResult">
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
