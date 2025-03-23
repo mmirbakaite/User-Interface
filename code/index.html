@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <div class="output-screen" id="output-screen">0</div>
+        <div class="buttons">
+            <button class="btn operation">%</button>
+            <button class="btn operation">CE</button>
+            <button class="btn operation">C</button>
+            <button class="btn operation">DEL</button>
+            <button class="btn operation" data-operation="reciprocal"><span>1⁄x</span></button>
+            <button class="btn operation" data-operation="power"><span>xⁿ</span></button>
+            <button class="btn operation" data-operation="square"><span>x²</span></button>
+            <button class="btn operation" data-operation="sqrt"><span>√x</span></button>
+            
+
+            <button class="btn number">7</button>
+            <button class="btn number">8</button>
+            <button class="btn number ">9</button>
+            <button class="btn operation operation-dark" data-operation="exponent"><i class="fas fa-superscript">÷</i></button>
+            <button class="btn number">4</button>
+            <button class="btn number">5</button>
+            <button class="btn number">6</button>
+            <button class="btn operation operation-dark" data-operation="multiply"><i class="fas fa-times"></i>x</button>
+            <button class="btn number">1</button>
+            <button class="btn number">2</button>
+            <button class="btn number">3</button>
+            <button class="btn operation operation-dark" data-operation="subtract"><i class="fas fa-minus"></i>-</button>
+            <button class="btn comma">+/-</button>
+            <button class="btn number">0</button>
+            <button class="btn comma">,</button>
+            <button class="btn operation operation-dark" data-operation="add"><i class="fas fa-plus"></i>+</button>
+            <button class="btn equal-btn operation operation-dark">=</button> 
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

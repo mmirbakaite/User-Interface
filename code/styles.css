@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    text-align: center;
+    width: 100%;
+    max-width: 1920px; 
+    min-width: 360px; 
+    min-height: 650px; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.btn.number, .btn.comma {
+    color: #333;
+}
+
+
+.btn-small {
+    padding: 15px 20px;
+    font-size: 20px;
+}
+
+.output-screen {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    flex: 1;
+    min-height: 0;
+}
+
+
+
+.btn {
+    font-size: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #f2f2f2;
+    color: #333;
+    touch-action: manipulation;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+}
+
+.btn:active {
+    background-color: #ccc;
+    transition: background-color 0.1s ease;
+}
+
+.operation {
+    background-color: #b1cbe3;
+    color: white;
+}
+
+.btn.operation:hover {
+    background-color: #70808f;
+    color: white;
+}
+
+.btn.operation:active {
+    background-color: #374a5c;
+    transition: background-color 0.1s ease;
+}
+
+.operation.operation-dark {
+    background-color: #394f7c;
+    color: white;
+}
+
+.btn.operation.operation-dark:hover {
+    background-color: #19326e;
+    color: white;
+}
+
+.btn.operation.operation-dark:active {
+    background-color: #121e3b;
+    transition: background-color 0.1s ease;
+}
+
+.equal-btn {
+    grid-column: span 4;
+    background-color: #66b3ff;
+    color: white;
+}
+
+.equal-btn:active {
+    background-color: #4c8fff;
+}
+
+
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 10px;
+    }
+
+    .output-screen {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .btn:not(:active) {
+        background-color: #f2f2f2;
+    }
+
+    .operation:not(:hover) {
+        background-color: #b1cbe3;
+    }
+
+    .btn.operation.operation-dark:not(:active) {
+        background-color: #394f7c;
+    }
+
+    .equal-btn:not(:active):hover {
+        background-color: #66b3ff;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .calculator {
+        min-width: 360px;
+        min-height: 650px;
+    }
+}
